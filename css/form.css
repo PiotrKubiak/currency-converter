@@ -27,10 +27,10 @@
     padding: 8px;
     max-width: 500px;
     margin: 15px 10px 0;
-    width: 0 auto;
     color: rgb(14, 11, 11);
     font-size: 15px;
     text-align: center;
+    box-shadow: 0 0 15px rgb(206, 204, 204);
 }
 
 .form__field:required {
@@ -39,7 +39,7 @@
 }
 
 .form__button:hover {
-    background-color: red;
+    background-color: rgb(206, 0, 0);
 }
 
 .form__fieldset {
@@ -48,6 +48,7 @@
     margin: 0 auto;
     max-width: 600;
     padding-top: 20px;
+    box-shadow: 0 0 40px rgb(22, 22, 22);
 }
 
 .form__frame {
@@ -89,5 +90,5 @@
 }
 
 .form__footer:hover {
-    background-color: red;
+    background-color: rgb(206, 0, 0);
 }
