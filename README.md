@@ -2,6 +2,10 @@
 
 ## This is my currency calculator 
 
+## DEMO:
+
+[Link to my currency kalkulator](https://piotrkubiak.github.io/currency-converter/)
+
 ![Calculator](images/screen.jpg)
 
 You can convert from PLN to:
