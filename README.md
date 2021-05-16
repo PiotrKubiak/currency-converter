@@ -18,11 +18,11 @@ You can convert from PLN to:
 
 ### INSTRUCTION:
 
-When you want to convert PLN to e.g. Euro, you have to enter the value of your money in the PLN field, then select the Euro currency and click "Przelicz !!!".
+When you want to convert PLN to e.g. Euro, you have to enter the value of your money in the PLN field, then select the Euro currency and click "Przelicz".
 
 The result will appear in red in the field "Wynik =>"
 If you want to re-transfer, click "Resetuj". 
 
-You can also see the current exchange rates by clicking on the bottom "AKTUALNE KURSY WALUT!!!"
+You can also see the current exchange rates by clicking on the bottom "AKTUALNE KURSY WALUT"
 
 ### 😀 Thank you for using my currency calculator! 😀

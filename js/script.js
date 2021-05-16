@@ -1,53 +1,62 @@
-let form = document.querySelector(".js-form");
-let formInput = document.querySelector(".js-form__input");
-let formSelect = document.querySelector(".js-form__select");
-let paragraph = document.querySelector(".js-form__result");
-
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    let euroRate = 4.56;
-    let poundRate = 5.29;
-    let usdRate = 3.80;
-    let kronenRate = 0.46;
-    let kronesRate = 0.45;
-    let frankRate = 4.13;
-
-    let rates = formInput.value;
-    let currency = formSelect.value;
-
-    let resultAmount;
-    let resultSentence = "Wynik=>";
-
-    switch (currency) {
-        case "EUR":
-            resultAmount = (rates / euroRate).toFixed(2);
-            paragraph.innerText = `${resultSentence} ${resultAmount} EUR`;
-            break;
-        case "GBP":
-            resultAmount = (rates / poundRate).toFixed(2);
-            paragraph.innerText = `${resultSentence} ${resultAmount} GBP`;
-            break;
-        case "USD":
-            resultAmount = (rates / usdRate).toFixed(2);
-            paragraph.innerText = `${resultSentence} ${resultAmount} USD`;
-            break;
-        case "NOK":
-            resultAmount = (rates / kronenRate).toFixed(2);
-            paragraph.innerText = `${resultSentence} ${resultAmount} NOK`;
-            break;
-        case "SEK":
-            resultAmount = (rates / kronesRate).toFixed(2);
-            paragraph.innerText = `${resultSentence} ${resultAmount} SEK`;
-            break;
-        case "CHF":
-            resultAmount = (rates / frankRate).toFixed(2);
-            paragraph.innerText = `${resultSentence} ${resultAmount} CHF`;
-            break;
-        default:
-            paragraph.innerText = "ERROR!!!";
+{
+    const welcome = () => {
+        console.log("Hello developers!");
     }
-    form.addEventListener("reset", () => {
-        paragraph.innerText = "Wynik=>";
-    });
-});
+
+    const calculateResult = (amount, currency) => {
+        const rateEUR = 4.56;
+        const rateGBP = 5.29;
+        const rateUSD = 3.80;
+        const rateNOK = 0.46;
+        const rateSEK = 0.45;
+        const rateCHF = 4.13;
+
+        switch (currency) {
+            case "EUR":
+                return amount / rateEUR;
+            case "GBP":
+                return amount / rateGBP;
+            case "USD":
+                return amount / rateUSD;
+            case "NOK":
+                return amount / rateNOK;
+            case "SEK":
+                return amount / rateSEK;
+            case "CHF":
+                return amount / rateCHF;
+        }
+    };
+
+    const updateResultText = (amount, result, currency,) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerHTML = `${amount.toFixed(2)} PLN = <strong>${result.toFixed(2)} ${currency}</strong>`;
+    };
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+
+        const amountElement = document.querySelector(".js-amount");
+        const currencyElement = document.querySelector(".js-currency");
+
+        const amount = +amountElement.value;
+        const currency = currencyElement.value;
+
+        const result = calculateResult(amount, currency);
+
+        updateResultText(amount, result, currency);
+    };
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("submit", onFormSubmit);
+
+        formElement.addEventListener("reset", () => {
+            resultElement.innerText = "Wynik";
+        });
+
+        welcome();
+
+    }
+    init();
+}
