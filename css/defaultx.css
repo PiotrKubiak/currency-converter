@@ -2,11 +2,11 @@ html {
   box-sizing: border-box;
 }
 
-​ *, ::after, ::before {
+*, ::after, ::before {
   box-sizing: inherit;
 }
 
-​ body {
+body {
   display: grid;
   place-items: center;
   height: 100vh;
@@ -16,7 +16,7 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
-​ .wrapper {
+.wrapper {
   max-width: 800px;
   padding-top: 50px;
   margin: 16px;
