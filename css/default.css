@@ -1,24 +1,23 @@
 html {
-    box-sizing: border-box;
-  }
-  ​
-  *, ::after, ::before {
-      box-sizing: inherit;
-  }
-  ​
-  body {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    background: linear-gradient(hsl(0, 0%, 19%), hsla(0, 0%, 0%, 0.824)),
-      url(../images/kasa.jpg);
-    background-size: cover;
-    background-position: center;
-    font-family: "Poppins", sans-serif;
-  }
-  ​
-  .wrapper {
-    max-width: 800px;
-    padding-top: 50px;
-    margin: 16px;
-  }
+  box-sizing: border-box;
+}
+
+​ *, ::after, ::before {
+  box-sizing: inherit;
+}
+
+​ body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: linear-gradient(hsl(0, 0%, 19%), hsla(0, 0%, 0%, 0.824)), url(../images/kasa.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
+}
+
+​ .wrapper {
+  max-width: 800px;
+  padding-top: 50px;
+  margin: 16px;
+}

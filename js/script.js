@@ -58,7 +58,7 @@
 
         formElement.addEventListener("submit", onFormSubmit);
 
-        formElement.addEventListener("reset", resetResultText);        
+        formElement.addEventListener("reset", resetResultText);
 
     }
     init();

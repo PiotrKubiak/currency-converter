@@ -1,54 +1,55 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🤑 kalkulator walut 🤑</title>
-    <link rel="icon" href="images/ikon.png">
-    <meta property="og:image" content="images/share.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" />
-    <link href="css/form.css" rel="stylesheet">
-    <link href="css/default.css" rel="stylesheet">
-    <script defer src="js/script.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🤑 kalkulator walut 🤑</title>
+  <link rel="icon" href="images/ikon.png">
+  <meta property="og:image" content="images/share.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" />
+  <link href="css/form.css" rel="stylesheet">
+  <link href="css/default.css" rel="stylesheet">
+  <script defer src="js/script.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="wrapper">
-        <form class="form js-form">
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">KALKULATOR WALUT</legend>
-                <p class="form__paragraph">
-                  <label class="form__label">
-                    <span class="form__span">Ilość w zł</span> 
-                    <input step="any" min="0" class="form__field js-amount" type="number" autofocus required placeholder="Wpisz kwotę">
-                  </label>
-                </p>
-                <p class="form__paragraph">
-                  <label class="form__label">
-                    <span class="form__span">Przelicz na</span> 
-                    <select class="form__field js-currency" required>
-                      <option value="EUR">EUR (EURO)</option>
-                      <option value="GBP">GBP (FUNT BRYTYJSKI)</option>
-                      <option value="USD">USD (DOLAR USA)</option>
-                      <option value="NOK">NOK (KORONA NORWESKA)</option>
-                      <option value="SEK">SEK (KORONA SZWEDZKA)</option>
-                      <option value="CHF">CHF (FRANK SZWAJCARSKI)</option>
-                      </select>
-                    </label>
-                </p>
-                <div class="form__buttons">
-                  <button class="form__button" type="submit">Przelicz</button>
-                  <button class="form__button form__button--reset" type="reset">Reset</button>
-                </div>
-                <div class="form__result js-result"></div>
-            </fieldset>
-          </form>
-      </div> 
+  <div class="wrapper">
+    <form class="form js-form">
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">KALKULATOR WALUT</legend>
+        <p class="form__paragraph">
+          <label class="form__label">
+            <span class="form__span">Ilość w zł</span>
+            <input step="any" min="0" class="form__field js-amount" type="number" autofocus required
+              placeholder="Wpisz kwotę">
+          </label>
+        </p>
+        <p class="form__paragraph">
+          <label class="form__label">
+            <span class="form__span">Przelicz na</span>
+            <select class="form__field js-currency" required>
+              <option value="EUR">EUR (EURO)</option>
+              <option value="GBP">GBP (FUNT BRYTYJSKI)</option>
+              <option value="USD">USD (DOLAR USA)</option>
+              <option value="NOK">NOK (KORONA NORWESKA)</option>
+              <option value="SEK">SEK (KORONA SZWEDZKA)</option>
+              <option value="CHF">CHF (FRANK SZWAJCARSKI)</option>
+            </select>
+          </label>
+        </p>
+        <div class="form__buttons">
+          <button class="form__button" type="submit">Przelicz</button>
+          <button class="form__button form__button--reset" type="reset">Reset</button>
+        </div>
+        <div class="form__result js-result"></div>
+      </fieldset>
+    </form>
+  </div>
 </body>
 
 </html>
