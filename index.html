@@ -18,47 +18,37 @@
 </head>
 
 <body>
-    <form class="form js-form">
-        <fieldset class="form__fieldset">
-            <legend class="form__legend">💱 KALKULATOR WALUT 💱</legend>
-
-            <fieldset class="form__frame">
-                <label>
-                    <span class="form__labelText">💸Ilość w PLN:</span>
-                    <input step="any" min="0" class="form__field js-amount" type="number" required placeholder="PLN">
-                </label>
-            </fieldset>
-            <fieldset class="form__frame">
-                <label>
-                    <span class="form__labelText">Waluta do wyboru:</span>
+    <div class="wrapper">
+        <form class="form js-form">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">KALKULATOR WALUT</legend>
+                <p class="form__paragraph">
+                  <label class="form__label">
+                    <span class="form__span">Ilość w zł</span> 
+                    <input step="any" min="0" class="form__field js-amount" type="number" autofocus required placeholder="Wpisz kwotę">
+                  </label>
+                </p>
+                <p class="form__paragraph">
+                  <label class="form__label">
+                    <span class="form__span">Przelicz na</span> 
                     <select class="form__field js-currency" required>
-                        <option value="EUR">EUR (EURO)</option>
-                        <option value="GBP">GBP (FUNT BRYTYJSKI)</option>
-                        <option value="USD">USD (DOLAR USA)</option>
-                        <option value="NOK">NOK (KORONA NORWESKA)</option>
-                        <option value="SEK">SEK (KORONA SZWEDZKA)</option>
-                        <option value="CHF">CHF (FRANK)</option>
-                    </select>
-                </label>
+                      <option value="EUR">EUR </option>
+                      <option value="GBP">GBP (FUNT BRYTYJSKI)</option>
+                      <option value="USD">USD (DOLAR USA)</option>
+                      <option value="NOK">NOK (KORONA NORWESKA)</option>
+                      <option value="SEK">SEK (KORONA SZWEDZKA)</option>
+                      <option value="CHF">CHF (FRANK SZWAJCARSKI)</option>
+                      </select>
+                    </label>
+                </p>
+                <div class="form__buttons">
+                  <button class="form__button" type="submit">Przelicz</button>
+                  <button class="form__button form__button--reset" type="reset">Reset</button>
+                </div>
+                <div class="form__result js-result"></div>
             </fieldset>
-        </fieldset>
-        <div class="form__buttons">
-            <p>
-                <button class="form__button" type="submit">Przelicz</button>
-            </p>
-            <p>
-                <button class="form__button" type="reset">Reset</button>
-            </p>
-        </div>
-        <p class="form__paragraph js-result">Wynik</p>
-        <footer>
-            <p>
-                <a class="form__footer" href="https://mybank.pl/kursy-walut/">AKTUALNE KURSY WALUT</a>
-            </p>
-        </footer>
-
-    </form>
-
+          </form>
+      </div> 
 </body>
 
 </html>

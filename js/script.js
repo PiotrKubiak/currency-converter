@@ -3,6 +3,11 @@
         console.log("Hello developers!");
     }
 
+    const resetResultText = () => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerText = "";
+    }
+
     const calculateResult = (amount, currency) => {
         const rateEUR = 4.56;
         const rateGBP = 5.29;
@@ -47,15 +52,13 @@
     };
 
     const init = () => {
+        welcome();
+
         const formElement = document.querySelector(".js-form");
 
         formElement.addEventListener("submit", onFormSubmit);
 
-        formElement.addEventListener("reset", () => {
-            resultElement.innerText = "Wynik";
-        });
-
-        welcome();
+        formElement.addEventListener("reset", resetResultText);        
 
     }
     init();
